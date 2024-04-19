@@ -1,4 +1,4 @@
-# Тестовое задание в Авито "Кинопоиск"
+# Тестовое [задание](https://github.com/avito-tech/frontend-trainee-assignment-2024?tab=readme-ov-file) в Авито "Кинопоиск"
 
 
 ### Локальный запуск ###
