@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.home-container{
+    text-align: center;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.filters {
+    display: flex;
+    position: relative;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-inline: 5%;
+    /* width: 100vw; */
+}
+
+.movie-card {
+    /* width: 25%; */
+    width: 200px;
+    /* max-width: 300px; */
+    /* min-width: 200px; */
+    position: relative;
+    /* height: 800px;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    /* border:1px solid black; */
+
+    /* ТУТ ТОЖЕ РАЗОБРАТЬСЯ С РАЗМЕРАМИ КАРТОЧКИ */
+}
+
+.movie-card:hover {
+    transform: scale(1.1, 1.1);
+    transition-duration: 0.8s;
+
+}
+
+.movie-card:hover .movie-image {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8))
+}
+
+.movie-image {
+    width: auto;
+    height: 300px;
+}
+
+.movie-card img {
+    height: 100%;
+    width: 100%;
+    /* border-radius: 5px; */
+}
+
+
+.movie-name {
+    /* text-align: center; */
+    margin-bottom: 10px;
+}
+
+.kinopoisk-rate {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25%;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.green {
+    background-color: #3cb33c;
+}
+
+.grey {
+    background-color: #7e7c7c;
+}
+
+.country-year {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(103, 102, 102);
+}
+
+.movie-genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.movie-genre {
+    background-color: grey;
+    border-radius: 5px;
+    color: white;
+    font-weight: 200;
+    padding: 2px;
+}
+
+.imdb-rate {
+    color: rgb(103, 102, 102);
+    margin-bottom: 10px;
+}
+
+.movie-description {
+    color: rgb(103, 102, 102);
+    font-size: 1rem;
+    line-height: 1.25rem;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+}
+
+@media (max-width: 767px) {
+    .movie-list {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .movie-card {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    * {
+        background-color: white;
+    }
+}

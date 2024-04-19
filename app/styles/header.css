@@ -1,0 +1,8 @@
+.search-modal{
+    height: 50px;
+    text-align: center;
+}
+
+.search-modal input{
+width: 30%;
+}
