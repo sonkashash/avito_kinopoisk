@@ -8,9 +8,7 @@ const MovieCard = ({ movie_info }) => {
         <div className="movie-card">
             <div className="movie-image" > 
             {(!movie_info.poster.url) ? (
-        <Flex align="center" gap="middle" className="spinner">
-          <Spin size="large" />
-        </Flex>
+        <span>Нет постера</span>
       ) : (
             <img src={movie_info.poster.url} alt={movie_info.name} />)}
             </div>

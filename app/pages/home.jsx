@@ -74,7 +74,7 @@ export default function Home() {
   // const filteredMovies = searchText? movies.filter(movie =>
   //       movie.name.toLowerCase().includes(searchText.toLowerCase())
   //      ) : movies;
-       
+      console.log(movies)
 
   return (
     <div ref={containerRef} className="home-container"> 
@@ -132,7 +132,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <Pagination current={currentPage} total={totalElements} onChange={handlePageChange} onShowSizeChange={(current, pageSize)=>setMoviesPerPage(pageSize)}/>
+          <Pagination current={currentPage} total={1000000} onChange={handlePageChange} onShowSizeChange={(current, pageSize)=>setMoviesPerPage(pageSize)}/>
         </>
       )}
     </div>

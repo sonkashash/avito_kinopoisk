@@ -69,9 +69,9 @@ import Movie from "./pages/movie.jsx";
  
 export default function App(){
 
-  console.log("TOKEN:", process.env.TOKEN);
-const token = process.env.TOKEN;
-console.log(token);     
+//   console.log("TOKEN:", process.env.TOKEN);
+// const token = process.env.TOKEN;
+// console.log(token);     
         
     return <div>
             <Link to="/"></Link> 
