@@ -9,7 +9,6 @@ export default function Home() {
   const [movies, setMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [moviesPerPage, setMoviesPerPage] = useState(10);
-  const [totalPages, setTotalPages] = useState(0);
   const [totalElements, setTotalElements] = useState(0);
   const [filters, setFilters] = useState({});
   const [searchText, setSearchText] = useState("");
@@ -40,7 +39,6 @@ export default function Home() {
       .then(response => response.json())
       .then(data => {
         setMovies(data.docs);
-        setTotalPages(data.pages);
         setTotalElements(data.total);
         setLoading(false);
       })
