@@ -32,7 +32,7 @@ a {
     gap: 30px;
     justify-content: center;
     margin-inline: 5%;
-    /* width: 100vw; */
+    margin-bottom: 30px;
 }
 
 .movie-card {
@@ -70,7 +70,6 @@ a {
     /* border-radius: 5px; */
 }
 
-
 .movie-name {
     /* text-align: center; */
     margin-bottom: 10px;
@@ -94,11 +93,17 @@ a {
 .grey {
     background-color: #7e7c7c;
 }
-
+.stub{
+    color: grey;
+    font-size: 10px;
+    position: relative;
+    top: 25%;
+}
 .country-year {
     display: flex;
     justify-content: space-between;
     color: rgb(103, 102, 102);
+    font-size: 14px;
 }
 
 .movie-genres {
@@ -106,6 +111,7 @@ a {
     flex-wrap: wrap;
     gap: 2px;
     margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .movie-genre {
@@ -122,6 +128,7 @@ a {
 }
 
 .movie-description {
+    text-align: left;
     color: rgb(103, 102, 102);
     font-size: 1rem;
     line-height: 1.25rem;
