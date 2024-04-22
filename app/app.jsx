@@ -66,6 +66,7 @@ import React, { useState, useEffect } from "react";
 import {Link}  from "react-router-dom";
 import Home from "./pages/home.jsx";
 import Movie from "./pages/movie.jsx";
+import "./styles/home.css";
  
 export default function App(){
 
@@ -73,7 +74,7 @@ export default function App(){
 // const token = process.env.TOKEN;
 // console.log(token);     
         
-    return <div>
+    return <div className="main-container">
             <Link to="/"></Link> 
             <Link to="/movie/:id"></Link>
         </div>;

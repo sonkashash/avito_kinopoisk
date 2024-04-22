@@ -49,7 +49,7 @@ export default function Home() {
   };
   useEffect(() => {
     getApiData();
-  }, [currentPage, filters, searchText]);  //delete from dependencies - moviesPerPage
+  }, [currentPage, filters, searchText, moviesPerPage]); 
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
