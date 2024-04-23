@@ -1,17 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import { Flex, Spin } from 'antd';
 import "../styles/home.css";
 
 
 const MovieCard = ({ movie_info }) => {
-    console.log(movie_info)
+    const [loading, setLoading] = useState(false);
     return (
         <div className="movie-card">
             <div className="movie-image" >
                 {(!movie_info.poster || !movie_info.poster.url) ? (
                     <span className="stub">Нет постера</span>
                 ) : (
-                    <img src={movie_info.poster.url} alt={movie_info.name} />
+                    <>
+                        
+                        <img src={movie_info.poster.url} style={{ filter: loading ? "none" : "blur(20px)" }}
+                            onLoad={() => setLoading(true)} alt={movie_info.name} />
+                    </>
                 )}
             </div>
             <div className="movie-info">
