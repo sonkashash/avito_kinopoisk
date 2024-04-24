@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import PosterCarousel from "../components/poster_carousel.jsx"
 import MovieReview from "../components/movie_review.jsx";
+import SimilarCarousel from "../components/similar_carousel.jsx";
 import { Flex, Spin } from 'antd';
 import "../styles/home.css";
 import "../styles/movie.css"
 
-export default function Movie({moviesPerPage}) {
+export default function Movie({ moviesPerPage }) {
     const { id } = useParams();
     const { search } = useLocation();
     const queryParams = new URLSearchParams(search);
@@ -17,8 +18,7 @@ export default function Movie({moviesPerPage}) {
     const actorsPerPage = 10; // Количество актёров на одной странице
     const API_URL = `https://api.kinopoisk.dev/v1.4/movie/${id}`;
 
-
-
+    
     const getApiData = async () => {
         fetch(API_URL, {
             headers: {
@@ -30,6 +30,9 @@ export default function Movie({moviesPerPage}) {
             })
             .then(data => {
                 setMovie(data);
+                console.log(data.similarMovies);
+                // console.log(data.isSeries);
+                //data.seasonsInfo.forEach((season) => console.log (season.number) )
             })
             .catch(e => {
                 console.log(`Проверьте токен ${e}`);
@@ -58,13 +61,14 @@ export default function Movie({moviesPerPage}) {
         pageNumbers.push(i);
     }
 
+
     return (
         <>
-         <div className="background_movie"><img src={movie.poster.url} alt="" /></div>
+            <div className="background_movie"><img src={movie.poster.url} alt="" /></div>
             {<Link to={`/?page=${currentPage}&limit=${moviesPerPage}`}>
                 <button>Назад</button>
             </Link>
-}
+            }
 
             {(!movie) ? (
                 <Flex align="center" gap="middle">
@@ -104,6 +108,24 @@ export default function Movie({moviesPerPage}) {
                     </div>
                 </div>
             )}
+            {(movie.similarMovies) ? <SimilarCarousel movies={movie.similarMovies} /> : <>Информации о похожих фильмах нет</>}
+
+            {/* <div className="similar-carousel">
+
+                <h2>Похожие фильмы</h2>
+                <Slider {...settings}>
+                <div className="similar-container">
+                
+                    {movie.similarMovies && movie.similarMovies.map(similar_movie => (
+                        // <Link to={`/similar_movie/${similar_movie.id}`}>
+                       
+                        // </Link>
+                    ))}
+                     </div>
+                </Slider>
+               
+               
+            </div>  */}
             <MovieReview movie_id={id} />
         </>
     );

@@ -1,11 +1,11 @@
-
-.movie-page{
+.movie-page {
     display: flex;
     gap: 30px;
     margin-inline: 10%;
     margin-bottom: 30px;
 }
-.background_movie{
+
+.background_movie {
     position: absolute;
     z-index: -20;
     top: 0;
@@ -15,10 +15,11 @@
     width: 100vw;
     overflow: hidden;
 }
-.background_movie img{
+
+.background_movie img {
     /* object-fit: cover; */
     /* width: 300vw; */
-    width: 200%; 
+    width: 200%;
 }
 
 /* .movie-page:after {
@@ -31,51 +32,60 @@
     background: rgba(0,0,0,.3);
     z-index: -10;
   } */
-.movie-poster{
+.movie-poster {
     width: 25%;
     text-align: center;
 }
-.movie-poster h4{
+
+.movie-poster h4 {
     text-align: left;
     margin-top: 20px;
     margin-top: 10px;
-    color: rgb(103, 102, 102);;
+    color: rgb(103, 102, 102);
+    ;
     font-weight: 500;
     font-size: 1.5em;
 }
-.carousel-container{
+
+.carousel-container {
     overflow: hidden;
     position: relative;
 }
-.carousel-container img{
+
+.carousel-container img {
     /* height: 400px; */
-  width: 100%;
+    width: 100%;
 }
 
-.carousel-container .css-dev-only-do-not-override-1kuana8.ant-carousel .slick-dots-bottom{
+.carousel-container .css-dev-only-do-not-override-1kuana8.ant-carousel .slick-dots-bottom {
     top: 0;
     height: 20px;
 }
-.carousel-container .css-dev-only-do-not-override-1kuana8.ant-carousel .slick-dots-bottom button{
+
+.carousel-container .css-dev-only-do-not-override-1kuana8.ant-carousel .slick-dots-bottom button {
     height: 10px;
 }
 
-.movie-main{
+.movie-main {
     width: 40%;
-} 
-.movie-page-name{
+}
+
+.movie-page-name {
     font-size: 3rem;
     line-height: 1;
     margin-bottom: 20px;
 }
-.movie-poster img{
+
+.movie-poster img {
     width: 100%;
 }
-.movie-actors{
+
+.movie-actors {
     text-align: left;
     width: 25%;
 }
-.rating{
+
+.rating {
     text-align: center;
     width: 200px;
     font-weight: 600;
@@ -86,12 +96,34 @@
     padding-top: 10px;
     margin-bottom: 20px;
 }
+
 .movie-actors-title {
     margin-bottom: 20px;
 }
+
 .movie-actors-list li {
     list-style-type: none;
     margin-bottom: 5px;
+}
+.similar-container{
+    margin-inline: 100px;
+    margin-bottom: 100px;
+    height: 250px;
+}
+.similar-card {
+    height: 250px;
+    /* display: flex;
+    gap: 10px; */
+}
+
+.similar-container div {
+    height: 100%;
+}
+
+.similar-poster img {
+    display: block;
+    height: 100%;
+    width: auto;
 }
 
 .pagination {
@@ -99,22 +131,23 @@
     list-style-type: none;
     padding: 0;
     margin: 20px 0;
-  }
-  
-  .pagination li {
+}
+
+.pagination li {
     list-style-type: none;
     cursor: pointer;
     padding: 5px 10px;
     border: 1px solid rgb(103, 102, 102);
     margin-right: 5px;
-  }
-  
-  .pagination li:hover, .pagination li.selected{
+}
+
+.pagination li:hover,
+.pagination li.selected {
     background-color: rgb(103, 102, 102);
     color: white;
-  }
+}
 
-.review{
+.review {
     height: auto;
     padding: 20px;
     background-color: #fff;
@@ -122,19 +155,22 @@
     margin-bottom: 30px;
     margin-inline: 50px;
 }
-.review{
+
+.review {
     border: 1px solid rgb(103, 102, 102);
 }
-.ant-pagination.css-dev-only-do-not-override-1kuana8{
+
+.ant-pagination.css-dev-only-do-not-override-1kuana8 {
     text-align: center;
 }
-.review-author{
+
+.review-author {
     font-size: 16px;
     color: rgb(103, 102, 102);
     font-weight: 400;
 }
-.review-content{
+
+.review-content {
     font-size: 10px;
     color: rgb(103, 102, 102);
 }
-
