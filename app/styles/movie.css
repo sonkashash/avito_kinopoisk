@@ -58,6 +58,7 @@
 }
 
 .carousel-container .css-dev-only-do-not-override-1kuana8.ant-carousel .slick-dots-bottom {
+    position: relative;
     top: 0;
     height: 20px;
 }

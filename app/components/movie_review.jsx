@@ -18,7 +18,6 @@ export default function MovieReview({movie_id}) {
                 return response.json();
             })
             .then(data => {
-                console.log(data.docs)
                 setReviews(data.docs);
                 setTotalReviews(data.total);
             })

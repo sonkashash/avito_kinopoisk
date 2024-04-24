@@ -30,7 +30,6 @@ export default function Movie({ moviesPerPage }) {
             })
             .then(data => {
                 setMovie(data);
-                console.log(data.similarMovies);
                 // console.log(data.isSeries);
                 //data.seasonsInfo.forEach((season) => console.log (season.number) )
             })
@@ -109,41 +108,7 @@ export default function Movie({ moviesPerPage }) {
                 </div>
             )}
             {(movie.similarMovies) ? <SimilarCarousel movies={movie.similarMovies} /> : <>Информации о похожих фильмах нет</>}
-
-            {/* <div className="similar-carousel">
-
-                <h2>Похожие фильмы</h2>
-                <Slider {...settings}>
-                <div className="similar-container">
-                
-                    {movie.similarMovies && movie.similarMovies.map(similar_movie => (
-                        // <Link to={`/similar_movie/${similar_movie.id}`}>
-                       
-                        // </Link>
-                    ))}
-                     </div>
-                </Slider>
-               
-               
-            </div>  */}
             <MovieReview movie_id={id} />
         </>
     );
 }
-
-
-
-
-{/* <div className="movie-card">
-                   
-                    <div className="movie-info"> */}
-
-
-
-
-{/* </div>
-                </div> */}
-{/* <h1>{movie.name}</h1>
-                <p>{movie.description}</p>
-                <p>Рейтинг: {movie.rating.imdb}</p>
-                <img src={movie.poster.url} alt={movie.name} /> */}
