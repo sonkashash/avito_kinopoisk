@@ -62,7 +62,7 @@ const SimilarCarousel = ({ movies }) => {
                     <Link to={`/movie/${movie.id}`}>
                         <h4 className="similar-name">{movie.name}</h4>
                         <div className="similar-poster">
-                            <img src={movie.poster.url} alt={movie.name} />
+                            <img src={movie.poster.url} alt={movie.name} style={{ filter: movie ? "none" : "blur(20px)" }}/>
                         </div> 
                     
                      </Link>

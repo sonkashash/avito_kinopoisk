@@ -11,14 +11,13 @@ export default function Movie({ moviesPerPage }) {
     const { id } = useParams();
     const { search } = useLocation();
     const queryParams = new URLSearchParams(search);
-    //  const moviesPerPage = queryParams.get('moviesPerPage');
     const [movie, setMovie] = useState(null);
     const [posters, setPosters] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1); // Состояние для текущей страницы актёров
-    const actorsPerPage = 10; // Количество актёров на одной странице
+    const [currentPage, setCurrentPage] = useState(1);
+    const actorsPerPage = 10;
     const API_URL = `https://api.kinopoisk.dev/v1.4/movie/${id}`;
 
-    
+
     const getApiData = async () => {
         fetch(API_URL, {
             headers: {
@@ -43,7 +42,11 @@ export default function Movie({ moviesPerPage }) {
     }, [API_URL]);
 
     if (!movie || typeof id === 'undefined') {
-        return <div>Loading...</div>;
+        return (
+            <Flex className="spinner" align="center" gap="middle">
+                <Spin size="large" />
+            </Flex>
+        )
     }
 
 
@@ -65,7 +68,7 @@ export default function Movie({ moviesPerPage }) {
         <>
             <div className="background_movie"><img src={movie.poster.url} alt="" /></div>
             {<Link to={`/?page=${currentPage}&limit=${moviesPerPage}`}>
-                <button>Назад</button>
+                <button className="button-back">❮ Назад</button>
             </Link>
             }
 
@@ -107,7 +110,7 @@ export default function Movie({ moviesPerPage }) {
                     </div>
                 </div>
             )}
-            {(movie.similarMovies) ? <SimilarCarousel movies={movie.similarMovies} /> : <>Информации о похожих фильмах нет</>}
+            {(movie.similarMovies) ? <SimilarCarousel movies={movie.similarMovies} /> : <></>}
             <MovieReview movie_id={id} />
         </>
     );

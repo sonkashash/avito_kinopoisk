@@ -127,7 +127,8 @@ export default function Home() {
         <>
           <div className="movie-list">
             {movies.map(movie => (
-              <Link to={`/movie/${movie.id}`}>
+              <Link to={{pathname: `/movie/${movie.id}`, 
+              search: `?ageRating=${movie.ageRating}&year=${movie.year}&country=${movie.country}`}}>
               <MovieCard movie_info={movie} loading={loading} />
               </Link>
             ))}

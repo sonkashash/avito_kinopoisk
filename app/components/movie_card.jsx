@@ -32,7 +32,8 @@ const MovieCard = ({ movie_info }) => {
                     <div className={Number(movie_info.rating.kp) >= 8 ? "kinopoisk-rate green" : "kinopoisk-rate grey"}>
                         {Math.round(Number(movie_info.rating.kp) * 100) / 100}
                     </div>
-                )}<p className="movie-description">{movie_info.description}</p>
+                )}
+                {/* <p className="movie-description">{movie_info.description}</p> */}
             </div>
         </div>
     );
